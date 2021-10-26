@@ -36,6 +36,15 @@ a:hover{text-decoration: none; cursor:pointer;}
 	font-style: normal;
 }
 
+@font-face {
+	font-family:'Adam-Light';
+	src: url('./fonts/Adam-Light/adam-light-webfont.woff2');
+	src: url('./fonts/Adam-Light/adam-light-webfont.woff2') format('woff2'),
+	url('./fonts/Adam-Light/adam-light-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* = Blocs
 -------------------------------------------------------------- */
 
@@ -54,6 +63,13 @@ a:hover{text-decoration: none; cursor:pointer;}
 .bloc .container{
 	padding-left:0;
 	padding-right:0;
+}
+
+
+/* Sizes */
+
+.bloc-lg{
+	padding:100px 20px;
 }
 
 /* = Full Screen Blocs 
@@ -85,6 +101,32 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 .bloc-fill-screen .fill-bloc-bottom-edge{
 	align-self: flex-end;
+}
+
+
+/* Background Effects */
+
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:-1;
+}
+.parallax {
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 
@@ -151,9 +193,25 @@ a:hover{text-decoration: none; cursor:pointer;}
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
+.mg-sm{
+	margin-top:10px;
+	margin-bottom:5px;
+}
 .mg-md{
 	margin-top:10px;
 	margin-bottom:20px;
+}
+img.mg-sm,img.mg-md,img.mg-lg{
+	margin-top: 0;
+}
+img.mg-sm{
+	margin-bottom:10px;
+}
+img.mg-md{
+	margin-bottom:30px;
+}
+img.mg-lg{
+	margin-bottom:50px;
 }
 
 /* = Buttons
@@ -235,12 +293,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:"AkiraExpanded-SuperBold";
 	font-size:60px;
 }
-.img-style{
-	height:150px;
-}
 .img-murdochgr-style{
-	height:800px;
-	width:800px;
+	height:1184px;
+	width:1380px;
+}
+.h2-style{
+	font-family:"Adam-Light";
+}
+.carousel-style{
+	width:77.24%;
 }
 
 /* = Colour
@@ -252,7 +313,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .tc-white{
 	color:#FFFFFF!important;
 }
+.tc-black{
+	color:#000000!important;
+}
 
+/* Bloc image backgrounds */
+
+.bg-murdochgrid{
+	background-image:url("img/murdochgrid.png");
+}
 
 
 

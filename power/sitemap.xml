@@ -6,14 +6,6 @@
 	<changefreq>Weekly</changefreq>
 	<priority>1.0</priority>
 	<image:image>
-	<image:loc>https://ravin.com.au/power/img/rdlogoblack.png</image:loc>
-	<image:title>rdlogoblack</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>https://ravin.com.au/power/img/murdochgrid.png</image:loc>
-	<image:title>murdochgrid</image:title>
-	</image:image>
-	<image:image>
 	<image:loc>https://ravin.com.au/power/img/</image:loc>
 	<image:title>Twitter Social Card Image</image:title>
 	</image:image>
