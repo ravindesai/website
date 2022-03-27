@@ -1,14 +1,14 @@
 /*-----------------------------------------------------------------------------------
-	Ravin Desai
-	About: Ravin Desai's Website
+	POWER.
+	About: POWER. | A project by Ravin.
 	Author: Ravin Desai
-	Version: 2.0
+	Version: 1.0
 	Built with Blocs
 -----------------------------------------------------------------------------------*/
 body{
 	margin:0;
 	padding:0;
-    background:#FCF2E8;
+    background:#A8ACA3;
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -17,14 +17,21 @@ body{
 a,button{transition: background .3s ease-in-out;outline: none!important;} /* Prevent blue selection glow on Chrome and Safari */
 a:hover{text-decoration: none; cursor:pointer;}
 
+
+/* Preloader */
+
+.page-preloader{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("img/pageload-spinner.gif") no-repeat center center;animation-name: preloader-fade;animation-delay: 2s;animation-duration: 0.5s;animation-fill-mode: both;}
+.preloader-complete{animation-delay:0.1s;}
+@keyframes preloader-fade {0% {opacity: 1;visibility: visible;}100% {opacity: 0;visibility: hidden;}}
+
 /* = Web Fonts
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family:'Adam-Light';
-	src: url('./fonts/Adam-Light/adam-light-webfont.woff2');
-	src: url('./fonts/Adam-Light/adam-light-webfont.woff2') format('woff2'),
-	url('./fonts/Adam-Light/adam-light-webfont.woff') format('woff');
+	font-family:'AkiraExpanded-SuperBold';
+	src: url('./fonts/AkiraExpanded-SuperBold/akira_expanded_demo-webfont.woff2');
+	src: url('./fonts/AkiraExpanded-SuperBold/akira_expanded_demo-webfont.woff2') format('woff2'),
+	url('./fonts/AkiraExpanded-SuperBold/akira_expanded_demo-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -81,22 +88,6 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 
-/* Background Textures */
-
-.bloc-bg-texture::before{
-	content:"";
-	background-size: 2px 2px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left:0;
-	right:0;
-}
-.texture-darken-strong::before{
-	background: rgba(0,0,0,0.8);
-}
-
-
 /* Background Effects */
 
 .parallax__container {
@@ -123,30 +114,52 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 
-/* Light theme */
+/* Dark theme */
 
-.d-bloc .card,.l-bloc{
+.d-bloc{
+	color:rgba(255,255,255,.7);
+}
+.d-bloc button:hover{
+	color:rgba(255,255,255,.9);
+}
+.d-bloc .icon-round,.d-bloc .icon-square,.d-bloc .icon-rounded,.d-bloc .icon-semi-rounded-a,.d-bloc .icon-semi-rounded-b{
+	border-color:rgba(255,255,255,.9);
+}
+.d-bloc .divider-h span{
+	border-color:rgba(255,255,255,.2);
+}
+.d-bloc .a-btn,.d-bloc .navbar a, .d-bloc a .icon-sm, .d-bloc a .icon-md, .d-bloc a .icon-lg, .d-bloc a .icon-xl, .d-bloc h1 a, .d-bloc h2 a, .d-bloc h3 a, .d-bloc h4 a, .d-bloc h5 a, .d-bloc h6 a, .d-bloc p a{
+	color:rgba(255,255,255,.6);
+}
+.d-bloc .a-btn:hover,.d-bloc .navbar a:hover,.d-bloc a:hover .icon-sm, .d-bloc a:hover .icon-md, .d-bloc a:hover .icon-lg, .d-bloc a:hover .icon-xl, .d-bloc h1 a:hover, .d-bloc h2 a:hover, .d-bloc h3 a:hover, .d-bloc h4 a:hover, .d-bloc h5 a:hover, .d-bloc h6 a:hover, .d-bloc p a:hover{
+	color:rgba(255,255,255,1);
+}
+.d-bloc .navbar-toggle .icon-bar{
+	background:rgba(255,255,255,1);
+}
+.d-bloc .btn-wire,.d-bloc .btn-wire:hover{
+	color:rgba(255,255,255,1);
+	border-color:rgba(255,255,255,1);
+}
+.d-bloc .card{
 	color:rgba(0,0,0,.5);
 }
-.d-bloc .card button:hover,.l-bloc button:hover{
+.d-bloc .card button:hover{
 	color:rgba(0,0,0,.7);
 }
-.l-bloc .icon-round,.l-bloc .icon-square,.l-bloc .icon-rounded,.l-bloc .icon-semi-rounded-a,.l-bloc .icon-semi-rounded-b{
+.d-bloc .card icon{
 	border-color:rgba(0,0,0,.7);
 }
-.d-bloc .card .divider-h span,.l-bloc .divider-h span{
+.d-bloc .card .divider-h span{
 	border-color:rgba(0,0,0,.1);
 }
-.d-bloc .card .a-btn,.l-bloc .a-btn,.l-bloc .navbar a,.l-bloc a .icon-sm, .l-bloc a .icon-md, .l-bloc a .icon-lg, .l-bloc a .icon-xl, .l-bloc h1 a, .l-bloc h2 a, .l-bloc h3 a, .l-bloc h4 a, .l-bloc h5 a, .l-bloc h6 a, .l-bloc p a{
+.d-bloc .card .a-btn{
 	color:rgba(0,0,0,.6);
 }
-.d-bloc .card .a-btn:hover,.l-bloc .a-btn:hover,.l-bloc .navbar a:hover, .l-bloc a:hover .icon-sm, .l-bloc a:hover .icon-md, .l-bloc a:hover .icon-lg, .l-bloc a:hover .icon-xl, .l-bloc h1 a:hover, .l-bloc h2 a:hover, .l-bloc h3 a:hover, .l-bloc h4 a:hover, .l-bloc h5 a:hover, .l-bloc h6 a:hover, .l-bloc p a:hover{
+.d-bloc .card .a-btn:hover{
 	color:rgba(0,0,0,1);
 }
-.l-bloc .navbar-toggle .icon-bar{
-	color:rgba(0,0,0,.6);
-}
-.d-bloc .card .btn-wire,.d-bloc .card .btn-wire:hover,.l-bloc .btn-wire,.l-bloc .btn-wire:hover{
+.d-bloc .card .btn-wire, .d-bloc .card .btn-wire:hover{
 	color:rgba(0,0,0,.7);
 	border-color:rgba(0,0,0,.3);
 }
@@ -227,32 +240,7 @@ button{
 	border-radius:0 0 29px 29px;
 }
 
-/* = Dividers
--------------------------------------------------------------- */
-.divider-h{
-	padding:20px 0;
-	width:100%;
-	display:inline-block;
-}
-.divider-h span{
-	display: block;
-	border-top:1px solid transparent;
-}
-.divider-half{
-	width: 50%;
-	margin: 0 auto;
-}
-.dropdown-menu .divider-h,.dropdown-menu .divider-half{
-	padding:0;
-}
 
-/* = Forms
--------------------------------------------------------------- */
-
-.form-control{
-	border-color:rgba(0,0,0,.1);
-	box-shadow:none;
-}
 
 
 
@@ -286,60 +274,32 @@ button{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"Adam-Light";
+	font-family:"Helvetica";
 }
 .container{
 	max-width:1140px;
-	background-color:#999999;
-	color:#333333!important;
-}
-.img-style{
-	width:520px;
-}
-.navbar-brand img{
-	width:128px;
 }
 .h1-style{
-	font-family:"Vollkorn";
-	line-height:300px;
-	font-size:300px;
-	letter-spacing:-30px;
-	text-indent:px;
+	font-family:"AkiraExpanded-SuperBold";
+	font-size:60px;
 }
-.h6-style{
-	font-family:"PT Serif";
+.img-murdochgr-style{
+	height:1184px;
+	width:1380px;
 }
-.text-box{
-	color:#333333!important;
-	background-color:#333333;
-}
-.form-check-label{
-	background-color:#333333;
-	color:#000000!important;
-}
-.label-style{
+.h2-style{
 	font-family:"Adam-Light";
-	color:#d6d6d6;
 }
-.text-area-style{
-	width:50%;
+.carousel-style{
+	width:77.24%;
 }
-.field-style{
-	width:50%;
+.bloc-divider-t-fill{
+	fill:#000000;
+	width:100%;
+	height:3px;
 }
-.field-bloc-1-style{
-	width:50%;
-}
-.btn-style{
-	width:50%;
-}
-.form{
-	justify-content:center;
-	align-items:center;
-	align-content:center;
-}
-.divider-style{
-	width:50.1%;
+.bloc-divider-b-fill{
+	fill:#666666;
 }
 
 /* = Colour
@@ -348,22 +308,18 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 /* Text colour styles */
 
-.tc-olive-drab-7{
-	color:#333333!important;
-}
-.tc-light-gray{
-	color:#D6D6D6!important;
+.tc-white{
+	color:#FFFFFF!important;
 }
 
-/* Link colour styles */
+/* Bloc image backgrounds */
 
-.ltc-manatee{
-	color:#9FA09E!important;
-}
-.ltc-manatee:hover{
-	color:#7f807e!important;
+.bg-JTbDni5w{
+	background-image:url("img/JTbDni5w.jpeg");
 }
 
+/* = Custom Bric Data
+-------------------------------------------------------------- */
 
 
 
@@ -445,20 +401,3 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	   height: 320px;
     }
 }
-@media (max-width: 767px){
-	.text-right{
-	}
-	.text-left{
-	}
-	.text-center{
-	}
-	
-}
-
-@media (max-width: 575px){
-	.footer-link{
-		text-align:center;
-	}
-	
-}
-
